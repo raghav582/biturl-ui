@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
+#main {
+    text-align: center; 
+    height: 100vh; 
+    background-image: "assets/img/logo.png";
+}
+
+#footer {
+    width: 100vh;
+}
