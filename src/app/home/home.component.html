@@ -1,7 +1,20 @@
-<div class="container" style="justify-content: center;">
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
-            aria-describedby="basic-addon2">
-        <span class="input-group-text" id="basic-addon2">@example.com</span>
-    </div>
+<div class="container" style="position: relative; top: 40%; bottom: 60%;">
+    <form [formGroup]="urlForm">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Enter Url" aria-label="Recipient's username"
+                aria-describedby="basic-addon2" formControlName="url" [(ngModel)]="urlData.url">
+            <span class="input-group-text" id="basic-addon2">
+                <button type="button" class="btn btn-primary" (click)="onShort()">Shorten</button>
+            </span>
+        </div>
+        <div class="input-group mb-3" *ngIf="shortUrl">
+                <input type="text" class="form-control" placeholder="Enter Url" aria-label="Recipient's username"
+                    aria-describedby="basic-addon2" formControlName="shortUrl" [(ngModel)]="shortUrl">
+                <span class="input-group-text" id="basic-addon2">
+                    <button type="button" class="btn btn-success" (click)="onCopy()">Copy</button>
+                </span>
+            </div>
+    </form>
 </div>
+
+<app-loader *ngIf="loading"></app-loader>
