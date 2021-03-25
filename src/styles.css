@@ -2,10 +2,20 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
+.body {
+    background-image: url(assets/img/background.jpg);
+    background-size: cover;
+}
+
 #main {
     text-align: center; 
     height: 100vh; 
     background-image: "assets/img/logo.png";
+}
+
+#navbar {
+    background-color: #841A8C;
+    opacity: 0.3;
 }
 
 #footer {
@@ -16,7 +26,23 @@
     /* Set the fixed height of the footer here */
     height: 60px;
     line-height: 60px; /* Vertically center the text there */
-    background-color: #f8f9fa !important;
+    background-color: #F8F9FA;
+    opacity: 0.3;
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.example-full-width{
+    width: 100%;
+}
+
+#homename {
+    color: white;
+    font-size: 70px;
+    font-family: monospace;
+}
+
+#tagname {
+    color: white;
+    font-family: -apple-system;
+}

@@ -1,1 +1,61 @@
-<p>contact works!</p>
+<div class="container" style="position: relative; top: 70px;">
+    <div class="row">
+        <div class="col-md-4">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar></div>
+                    <mat-card-title>Contact Us</mat-card-title>
+                    <mat-card-subtitle>Please fill the below details to let us know for any feedback.
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                    alt="Photo of a Shiba Inu"> -->
+                <mat-card-content>
+                    <form [formGroup]="contactForm">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Full Name</mat-label>
+                                    <input type="text" matInput formControlName="fullName"
+                                        [(ngModel)]="contactData.fullName" placeholder="Full Name" required>
+                                    <mat-hint></mat-hint>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-12">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Email</mat-label>
+                                    <input type="email" matInput formControlName="email" [(ngModel)]="contactData.email"
+                                        placeholder="email" required>
+                                    <mat-hint></mat-hint>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-12">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Phone</mat-label>
+                                    <input type="text" matInput formControlName="phone" [(ngModel)]="contactData.phone"
+                                        placeholder="Phone">
+                                    <mat-hint></mat-hint>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-12">
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label>Comment</mat-label>
+                                        <textarea type="text" style="height: 100px;" matInput formControlName="comments" [(ngModel)]="contactData.comments"
+                                            placeholder="Comment" required></textarea>
+                                        <mat-hint></mat-hint>
+                                    </mat-form-field>
+                                </div>
+
+                        </div>
+                    </form>
+                </mat-card-content>
+                <mat-card-actions>
+                        <button mat-raised-button color="primary" (click)="saveContact()">Submit</button>
+                </mat-card-actions>
+            </mat-card>
+
+        </div>
+    </div>
+</div>
+
+<app-loader *ngIf="loading"></app-loader>

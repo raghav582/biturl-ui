@@ -12,10 +12,15 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import {MatSnackBarModule,
-MatProgressSpinnerModule} from '@angular/material';
+import {
+  MatSnackBarModule,
+  MatProgressSpinnerModule,
+  MatCardModule,
+  MatInputModule,
+  MatButtonModule
+} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -33,10 +38,13 @@ MatProgressSpinnerModule} from '@angular/material';
     CommonModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatSnackBarModule,
     MatProgressSpinnerModule,
-    FormsModule,
-    ReactiveFormsModule
+    MatCardModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
