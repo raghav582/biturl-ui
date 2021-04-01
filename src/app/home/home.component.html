@@ -4,7 +4,7 @@
             <p id="homename">Biturl</p>
         </div>
         <div class="col-md-12">
-                <p id="tagname">Professional Url shortener service.</p>
+            <p id="tagname">Professional Url shortener service.</p>
         </div>
     </div>
     <form [formGroup]="urlForm">
@@ -16,13 +16,27 @@
             </span>
         </div>
         <div class="input-group mb-3" *ngIf="shortUrl">
-                <input type="text" class="form-control" placeholder="Enter Url" aria-label="Recipient's username"
-                    aria-describedby="basic-addon2" formControlName="shortUrl" [(ngModel)]="shortUrl">
-                <span class="input-group-text" id="basic-addon2">
-                    <button type="button" class="btn btn-success" (click)="onCopy()">Copy</button>
-                </span>
-            </div>
+            <input type="text" class="form-control" placeholder="Enter Url" aria-label="Recipient's username"
+                aria-describedby="basic-addon2" formControlName="shortUrl" [(ngModel)]="shortUrl">
+            <span class="input-group-text" id="basic-addon2">
+                <button type="button" class="btn btn-success" (click)="onCopy()">Copy</button>
+            </span>
+        </div>
     </form>
+    <div class="row" style="position: relative; top: 100px;">
+        <div class="col-md-4">
+            <p id="value">3425</p>
+            <p>Total Visitors</p>
+        </div>
+        <div class="col-md-4">
+            <p>1209</p>
+            <p>Total links shorten</p>
+        </div>
+        <div class="col-md-4">
+            <p>203</p>
+            <p>Daily User</p>
+        </div>
+    </div>
 </div>
 
 <app-loader *ngIf="loading"></app-loader>

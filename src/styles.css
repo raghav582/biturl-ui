@@ -14,8 +14,11 @@
 }
 
 #navbar {
-    background-color: #841A8C;
-    opacity: 0.3;
+    background-color: #841A8C !important;
+}
+
+#navbar a {
+    color: white;
 }
 
 #footer {
