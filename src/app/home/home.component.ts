@@ -3,7 +3,6 @@ import { UrlService } from '../service/url.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { UrlModel } from '../forms/urlForms';
-import { $ } from 'protractor';
 
 @Component({
   selector: 'app-home',
@@ -52,19 +51,5 @@ export class HomeComponent implements OnInit {
     document.execCommand('copy');
     document.body.removeChild(copyText);
     this._snackbar.open("Url is copied", "", {duration: 500});
-  }
-
-  animateEffet() {
-    $('#value').each(function () {
-      $(this).prop('Counter', 0).animate({
-        Counter:$(this).text()
-      }, {
-        duration: 1000,
-        easing: 'swing',
-        step: function(now) {
-          $(this).text(Math.ceil(now));
-        }
-      })
-    })
   }
 }
