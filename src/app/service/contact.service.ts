@@ -7,9 +7,9 @@ import { base_url, add_contact } from '../constants/app.url';
 })
 export class ContactService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  addContact(model) {
+  addContact(model: any) {
     return this.http.post(base_url + add_contact, model);
   }
 }

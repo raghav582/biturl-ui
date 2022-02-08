@@ -11,22 +11,22 @@ import { UrlModel } from '../forms/urlForms';
 })
 export class HomeComponent implements OnInit {
 
-  private urlData:UrlModel = new UrlModel();
-  private shortUrl:any;
-  private urlForm:FormGroup;
-  private loading = false;
+  urlData: UrlModel = new UrlModel();
+  shortUrl: any;
+  urlForm: FormGroup;
+  loading = false;
 
   constructor(
-    private urlService:UrlService,
+    private urlService: UrlService,
     private _snackbar: MatSnackBar,
-    private formbuilder:FormBuilder
+    private formbuilder: FormBuilder
   ) {
     this.urlForm = new FormGroup({});
     this.urlForm = this.formbuilder.group({
       url: ['', Validators.required],
       shortUrl: ['', Validators.required]
     })
-   }
+  }
 
   ngOnInit() {
   }
@@ -34,9 +34,9 @@ export class HomeComponent implements OnInit {
   onShort() {
     this.loading = true;
     this.urlService.addUrl(this.urlData).subscribe(
-      (res) => {
-        this.shortUrl = "https://bitrl.herokuapp.com/"+ res['url'];
-        this._snackbar.open("Url has been shorten", "", {duration: 1000});
+      (res: any) => {
+        this.shortUrl = "https://bitrl.herokuapp.com/" + res['url'];
+        this._snackbar.open("Url has been shorten", "", { duration: 1000 });
         this.loading = false;
       }
     )
@@ -50,6 +50,6 @@ export class HomeComponent implements OnInit {
     copyText.select();
     document.execCommand('copy');
     document.body.removeChild(copyText);
-    this._snackbar.open("Url is copied", "", {duration: 500});
+    this._snackbar.open("Url is copied", "", { duration: 500 });
   }
 }

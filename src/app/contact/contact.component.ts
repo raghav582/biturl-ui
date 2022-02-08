@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ContactDetails } from '../forms/contactForm';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { MatSnackBar } from '@angular/material';
 import { ContactService } from '../service/contact.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-contact',
@@ -12,9 +12,9 @@ import { ContactService } from '../service/contact.service';
 })
 export class ContactComponent implements OnInit {
 
-  private contactData: ContactDetails = new ContactDetails();
-  private contactForm: FormGroup;
-  private loading = false;
+   contactData: ContactDetails = new ContactDetails();
+   contactForm: FormGroup;
+   loading = false;
 
   constructor(
     private router: Router,
@@ -37,7 +37,7 @@ export class ContactComponent implements OnInit {
   saveContact() {
     this.loading = true;
     this.contactService.addContact(this.contactData).subscribe(
-      (res) => {
+      (res: any) => {
         if (res['success']) {
           this._snackbar.open("Submission successful", "", { duration: 1000 });
         } else {

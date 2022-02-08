@@ -13,14 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-import {
-  MatSnackBarModule,
-  MatProgressSpinnerModule,
-  MatCardModule,
-  MatInputModule,
-  MatButtonModule
-} from '@angular/material';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatCardModule } from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -41,10 +36,8 @@ import {
     FormsModule,
     ReactiveFormsModule,
     MatSnackBarModule,
-    MatProgressSpinnerModule,
     MatCardModule,
-    MatInputModule,
-    MatButtonModule
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

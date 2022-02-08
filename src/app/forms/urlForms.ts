@@ -1,4 +1,4 @@
 export class UrlModel {
     id: any;
-    url: String;
+    url: String | undefined;
 }

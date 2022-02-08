@@ -1,8 +1,8 @@
 export class ContactDetails {
     id: any;
-    fullName: String;
-    email: String;
-    phone: String;
-    comments: String;
-    status: Boolean;
+    fullName: String | undefined;
+    email: String | undefined;
+    phone: String | undefined;
+    comments: String | undefined;
+    status: Boolean | undefined;
 }

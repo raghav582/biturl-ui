@@ -8,10 +8,10 @@ import { base_url, add_url } from '../constants/app.url';
 export class UrlService {
 
   constructor(
-    private http:HttpClient
+    private http: HttpClient
   ) { }
 
-  addUrl(url){
+  addUrl(url: any) {
     return this.http.post(base_url + add_url, url);
   }
 }
